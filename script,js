@@ -1,36 +1,59 @@
- console.log("Hello World!");
+const reviews = [
+        {
+            id: 1,
+            name: 'name of person',
+            job:'write down job',
+            img: "#",
+            text: "chcjehckeckdjclkjedlckjdlcjldjldkjcvldkvhkdjlskjksdj",
 
- //string has quotes/Number no quotes let myTest = 123;
- console.log(typeof myTest);
+        },
+        {
+            id: 2,
+            name:"name of person",
+            job:'write job',
+            img: '#',
+            text:"jskccldkcojnccmdkscnmxmkclkclkjljljlhjl",
+        },
 
-console.log(10 + "eggs");
- console.log(10 + 8) + "eggs";
- console.log("eggs" + 10 + 8);
+        {
+             id: 3,
+            name:"name of person",
+            job:'write job',
+            img: '#',
+            text:"jskccldkcojnccmdkscnmxmkclkclkjljljlhjl",
+        },
+    ]
+const img = document.getElementById('person-img');
+const author = document.getElementById('author');
+const job = document.getElementById('job');
+const info = document.getElementById('info');
 
- //Both conditions need to be true
- console.log(7>3)&&(5>2);
+const prevBtn = document.querySelector('.prev-btn');
+const nexBtn = document.querySelector('.nex-btn')
 
- //Only one condition must be true
- console.log(10>3)||(10>12);
+let currentItem = 0;
 
- //Logical no
- console.log(!5>3);
+//load initial item
+window.addEventListener('DOContentLoaded', function ())
+const item = reviews[currentItem];
+img.src = item.img;
+author.textContent = item.name;
+job.textContent = item.job;
+info.textContent = item.info;
 
- function introduction(name,age);{
-    console.log(" Hello, my name is " + name + " and I am " + age + " years old ");
- }
-
- introduction("Maty",15);
-
-const hour = new Date().getHours();
-let greeting = "";
-
-if (hour<12){
-    greeting = "Good morning ☀️";
-}else if (hour<18){
-    greeting = "Good afternoon ☁️";
-}else{
-    greeting = "Good evening 🌙";
+function showPerson(person){
+        const item = reviews[person];
+        img.src = item.img;
+         author.textContent = item.name;
+         job.textContent = item.job;
+         info.textContent = item.info;
+         
 }
 
-document.getElementById("greeting").innerText = greeting;
+nextBtn.addEventListener('click', function(){
+    currentItem;
+    
+}
+
+
+];
