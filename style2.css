@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background: pink;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+#testimonials {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonial-container {
+    overflow: hidden;
+    height: 150px; /* keeps all testimonials same height */
+    position: relative;
+}
+
+.testimonial {
+    display: none; /* hide all by default */
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.testimonial.active {
+    display: block; /* only active one shows */
+}
+
+button.prev, button.next {
+    background: #efb8ca;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+button:hover {
+    background: #fcf9fa;
+}
